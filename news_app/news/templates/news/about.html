@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load sidebar %}
+
+{% block title %} О редакции — {{block.super}} {% endblock %}
+
+{% block content %}
+
+    <section class="slider-area">
+        <div class="container">
+            <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+                <h1 class="text-3xl font-bold mb-6">О нас</h1>
+              
+                <p>Добро пожаловать на страницу независимого студенческого СМИ "Голос Военмеха"!</p>
+        <p>Мы являемся коллективом студентов, стремящихся освещать важные события и темы, касающиеся студентов и сотрудников Военмеха. Наша цель - предоставить платформу для выражения мнений, обмена идеями и обсуждения актуальных вопросов.</p>
+        <p>Наши редакторы и авторы - это студенты разных курсов и факультетов, которые объединены общим желанием создавать качественный и интересный контент. Мы публикуем новости, статьи, интервью и аналитические материалы, которые отражают разнообразие мнений и взглядов нашей университетской общины.</p>
+              
+                <div class="mb-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.8923929300386!2d30.30975200000001!3d59.9173332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630f90384b97f%3A0xc9a65360cc7aac74!2z0JHQk9Ci0KMgItCS0J7QldCd0JzQldClIiDQuNC8LiDQlC7QpC4g0KPRgdGC0LjQvdC-0LLQsCwgItCd0L7QstGL0Lkg0JrQvtGA0L_Rg9GBIg!5e0!3m2!1sru!2sru!4v1728229936370!5m2!1sru!2sru"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              
+                <h2>Наша команда</h2>
+        <p>В редакцию "Голоса Военмеха" входят:</p>
+        <ul>
+            <li><strong>Главный редактор:</strong> Иван Иванов</li>
+            <li><strong>Заместитель главного редактора:</strong> Мария Петрова</li>
+            <li><strong>Редактор новостей:</strong> Алексей Сидоров</li>
+            <li><strong>Фоторедактор:</strong> Елена Смирнова</li>
+            <li><strong>Корреспонденты:</strong> Дмитрий Кузнецов, Наталья Власова, Олег Николаев</li>
+        </ul>
+
+        <h2>Контакты</h2>
+        <p>Если у вас есть вопросы, предложения или вы хотите присоединиться к нашей команде, свяжитесь с нами:</p>
+        <p><strong>Email:</strong> info@golosvoenmeha.ru</p>
+        <p><strong>Телефон:</strong> +7 (123) 456-7890</p>
+        <p>Мы всегда рады новым идеям и готовы к сотрудничеству!</p>
+              </div>
+        </div>
+    </section>
+    
+
+    <section class="blog-post-area">
+        <div class="container">
+            
+    
+
+        <section class="main-nav single-blog-area">
+            <div class="right-tags">
+                {% get_tags %}
+            </div>
+            
+            <div class="left-search newsletter">
+                <h2 class="sidebar-title main-tl">Поиск</h2>
+                <form action="{% url 'search' %}" method="get">
+                    <input type="text" name="s" id="" placeholder="Поиск...">
+                    <input type="submit" value="Поиск">
+                </form>
+            </div>
+        </section>  
+    </div>
+</section>
+
+{% endblock %}

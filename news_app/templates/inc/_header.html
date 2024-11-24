@@ -1,0 +1,22 @@
+{% load static %}
+{% load menu %}
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <div class="logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'img/logo.png'%}" alt="Новости" class="img-fluid"></a>
+                </div>
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col-12 col-md-10">
+                <nav class="collapse navbar-collapse" id="navbarMenu">
+                    {% show_menu %}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
